@@ -111,7 +111,7 @@ public class SnowSurfaceView extends SurfaceView implements
 		bitmap_snows[4] = BitmapFactory.decodeResource(getResources(),
 				R.drawable.snowflake_xxl);
 		bitmap_bg = BitmapFactory.decodeResource(getResources(),
-				R.drawable.bg14_day_snow);
+				R.drawable.shouye);
 	}
 
 	public void addRandomSnow() {

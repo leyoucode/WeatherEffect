@@ -34,17 +34,18 @@ public final class R {
         public static final int rain_xl=0x7f02000a;
         public static final int rain_xxl=0x7f02000b;
         public static final int raindrop_l=0x7f02000c;
-        public static final int snowflake_l=0x7f02000d;
-        public static final int snowflake_m=0x7f02000e;
-        public static final int snowflake_s=0x7f02000f;
-        public static final int snowflake_xl=0x7f020010;
-        public static final int snowflake_xxl=0x7f020011;
-        public static final int yjjc_h_a1=0x7f020012;
-        public static final int yjjc_h_a2=0x7f020013;
-        public static final int yjjc_h_a3=0x7f020014;
-        public static final int yjjc_h_a4=0x7f020015;
-        public static final int yjjc_h_a5=0x7f020016;
-        public static final int yjjc_h_a6=0x7f020017;
+        public static final int shouye=0x7f02000d;
+        public static final int snowflake_l=0x7f02000e;
+        public static final int snowflake_m=0x7f02000f;
+        public static final int snowflake_s=0x7f020010;
+        public static final int snowflake_xl=0x7f020011;
+        public static final int snowflake_xxl=0x7f020012;
+        public static final int yjjc_h_a1=0x7f020013;
+        public static final int yjjc_h_a2=0x7f020014;
+        public static final int yjjc_h_a3=0x7f020015;
+        public static final int yjjc_h_a4=0x7f020016;
+        public static final int yjjc_h_a5=0x7f020017;
+        public static final int yjjc_h_a6=0x7f020018;
     }
     public static final class id {
         public static final int action_settings=0x7f080003;

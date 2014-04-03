@@ -5,8 +5,10 @@ import java.util.Random;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.os.Message;
@@ -30,6 +32,8 @@ public class RainView extends View{
 	int view_width = 0;
 	int MAX_SPEED = 55;
 
+	Bitmap bitmap_bg;
+	
 	/**
 	 * ¹¹ÔìÆ÷
 	 * 
@@ -54,6 +58,9 @@ public class RainView extends View{
 				.getBitmap();
 //		bitmap_snows = ((BitmapDrawable) r.getDrawable(R.drawable.snowflake_xxl))
 //				.getBitmap();
+		
+		bitmap_bg = BitmapFactory.decodeResource(getResources(),
+				R.drawable.shouye);
 	}
 
 	/**
@@ -61,9 +68,8 @@ public class RainView extends View{
 	 * 
 	 */
 	public void SetView(int height, int width) {
-		view_height = height - 100;
-		view_width = width - 50;
-
+		view_height = height ;//- 100;
+		view_width = width ;//- 50;
 	}
 
 	/**
@@ -80,6 +86,9 @@ public class RainView extends View{
 	@Override
 	public void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
+		
+		canvas.drawBitmap(bitmap_bg, null, new Rect(0, 0, view_width, view_height), mPaint);
+		
 		for (int i = 0; i < MAX_SNOW_COUNT; i += 1) {
 			if (rains[i].coordinate.x >= view_width || rains[i].coordinate.y >= view_height) {
 				rains[i].coordinate.y = 0;
