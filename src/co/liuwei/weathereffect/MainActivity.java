@@ -2,12 +2,13 @@ package co.liuwei.weathereffect;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import co.liuwei.weathereffect.view.DynamicWeatherCloudyView;
-import co.liuwei.weathereffect.view.LoadWeatherView;
+import co.liuwei.weathereffect.view.CloudyView;
+import co.liuwei.weathereffect.view.RainView;
 import co.liuwei.weathereffect.view.SnowSurfaceView;
+import co.liuwei.weathereffect.view.WindmillSurfaceView;
 
 public class MainActivity extends Activity {
 
@@ -27,6 +28,21 @@ public class MainActivity extends Activity {
 	}
 
 	public void doRain(View v){
+//		linearWeatherBg.removeAllViews();
+//		RainSurfaceView rainSurfaceView=new RainSurfaceView(this);
+//		linearWeatherBg.addView(rainSurfaceView);
+		
+		linearWeatherBg.removeAllViews();
+		RainView rainView = new RainView(this,null);
+		rainView.LoadSnowImage();
+
+		// 获取当前屏幕的高和宽
+		DisplayMetrics dm = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		rainView.SetView(dm.heightPixels, dm.widthPixels);
+		linearWeatherBg.addView(rainView);
+		// 更新当前雪花
+		rainView.update();
 		
 	}
 	public void doSnow(View v){
@@ -39,13 +55,13 @@ public class MainActivity extends Activity {
 	}
 	public void doCloudy(View v){
 		linearWeatherBg.removeAllViews();
-		DynamicWeatherCloudyView view1=new DynamicWeatherCloudyView(this,
+		CloudyView view1=new CloudyView(this,
 				 R.drawable.yjjc_h_a2, -150, 40,20);
-				 DynamicWeatherCloudyView view4=new DynamicWeatherCloudyView(this,
+				 CloudyView view4=new CloudyView(this,
 				 R.drawable.yjjc_h_a5, 0, 60,30);
-				 DynamicWeatherCloudyView view2=new DynamicWeatherCloudyView(this,
+				 CloudyView view2=new CloudyView(this,
 				 R.drawable.yjjc_h_a3, 280, 80,50);
-				 DynamicWeatherCloudyView view3=new DynamicWeatherCloudyView(this,
+				 CloudyView view3=new CloudyView(this,
 				 R.drawable.yjjc_h_a4, 140, 130,40);
 				 linearWeatherBg.addView(view1);
 				 linearWeatherBg.addView(view2);
@@ -64,7 +80,7 @@ public class MainActivity extends Activity {
 	}
 	public void doWind(View v){
 		linearWeatherBg.removeAllViews();
-		LoadWeatherView loadWeatherView = new LoadWeatherView(this);
+		WindmillSurfaceView loadWeatherView = new WindmillSurfaceView(this);
 		linearWeatherBg.addView(loadWeatherView);
 	}
 
