@@ -56,7 +56,23 @@ public class MainActivity extends Activity {
 		linearWeatherBg.addView(snowSurfaceView);
 	}
 	public void doOvercast(View v){
-		
+		linearWeatherBg.removeAllViews();
+		CloudyView view1=new CloudyView(this,
+				 R.drawable.overcast_cloud1, -150, 40,20);
+				 CloudyView view4=new CloudyView(this,
+				 R.drawable.overcast_cloud2, 0, 60,30);
+				 CloudyView view2=new CloudyView(this,
+				 R.drawable.overcast_cloud1, 280, 80,50);
+				 CloudyView view3=new CloudyView(this,
+				 R.drawable.overcast_cloud2, 140, 130,40);
+				 linearWeatherBg.addView(view1);
+				 linearWeatherBg.addView(view2);
+				 linearWeatherBg.addView(view3);
+				 linearWeatherBg.addView(view4);
+				 view1.move();
+				 view2.move();
+				 view3.move();
+				 view4.move();
 	}
 	public void doCloudy(View v){
 		linearWeatherBg.removeAllViews();
@@ -83,7 +99,23 @@ public class MainActivity extends Activity {
 		linearWeatherBg.addView(loadWeatherView);
 	}
 	public void doFog(View v){
-		
+		linearWeatherBg.removeAllViews();
+		CloudyView view1=new CloudyView(this,
+				 R.drawable.fog1, -150, 40,20);
+				 CloudyView view4=new CloudyView(this,
+				 R.drawable.fog2, 0, 60,30);
+				 CloudyView view2=new CloudyView(this,
+				 R.drawable.fog1, 280, 80,50);
+				 CloudyView view3=new CloudyView(this,
+				 R.drawable.fog2, 140, 130,40);
+				 linearWeatherBg.addView(view1);
+				 linearWeatherBg.addView(view2);
+				 linearWeatherBg.addView(view3);
+				 linearWeatherBg.addView(view4);
+				 view1.move();
+				 view2.move();
+				 view3.move();
+				 view4.move();
 	}
 	public void doWind(View v){
 		linearWeatherBg.removeAllViews();
