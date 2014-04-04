@@ -37,8 +37,8 @@ public class SnowSurfaceView extends SurfaceView implements
 	 */
 	public  boolean IsRunning = true;
 
-	private int left;
-	private int top;
+//	private int left;
+//	private int top;
 
 	private float screenWidth;
 	private float screenHeiht;
@@ -46,19 +46,19 @@ public class SnowSurfaceView extends SurfaceView implements
 	private boolean flag = true;
 
 	// 花的位置
-	private Coordinate[] snows = new Coordinate[80];
+//	private Coordinate[] snows = new Coordinate[80];
 
 	private static Random random = new Random();
 
-	/**
-	 * 图片移动速度
-	 */
-	private int dx = 1;
-	private int dy = 3;
-
-	private int sleepTime;
-
-	private int offset = 0;
+//	/**
+//	 * 图片移动速度
+//	 */
+//	private int dx = 1;
+//	private int dy = 3;
+//
+//	private int sleepTime;
+//
+//	private int offset = 0;
 
 	private ArrayList<Snow> snowflake_xxl = new ArrayList<Snow>();
 	private ArrayList<Snow> snowflake_xl = new ArrayList<Snow>();

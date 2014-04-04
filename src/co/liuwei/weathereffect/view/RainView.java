@@ -32,7 +32,7 @@ public class RainView extends View{
 	int view_width = 0;
 	int MAX_SPEED = 55;
 
-	Bitmap bitmap_bg;
+//	Bitmap bitmap_bg;
 	
 	/**
 	 * ¹¹ÔìÆ÷
@@ -56,11 +56,9 @@ public class RainView extends View{
 		Resources r = this.getContext().getResources();
 		bitmap_snows = ((BitmapDrawable) r.getDrawable(R.drawable.raindrop_l))
 				.getBitmap();
-//		bitmap_snows = ((BitmapDrawable) r.getDrawable(R.drawable.snowflake_xxl))
-//				.getBitmap();
 		
-		bitmap_bg = BitmapFactory.decodeResource(getResources(),
-				R.drawable.shouye);
+//		bitmap_bg = BitmapFactory.decodeResource(getResources(),
+//				R.drawable.shouye);
 	}
 
 	/**
@@ -87,7 +85,7 @@ public class RainView extends View{
 	public void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		
-		canvas.drawBitmap(bitmap_bg, null, new Rect(0, 0, view_width, view_height), mPaint);
+//		canvas.drawBitmap(bitmap_bg, null, new Rect(0, 0, view_width, view_height), mPaint);
 		
 		for (int i = 0; i < MAX_SNOW_COUNT; i += 1) {
 			if (rains[i].coordinate.x >= view_width || rains[i].coordinate.y >= view_height) {

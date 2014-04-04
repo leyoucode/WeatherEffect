@@ -1,11 +1,14 @@
 package co.liuwei.weathereffect;
 
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import co.liuwei.weathereffect.view.CloudyView;
+import co.liuwei.weathereffect.view.LightningView;
 import co.liuwei.weathereffect.view.RainView;
 import co.liuwei.weathereffect.view.SnowSurfaceView;
 import co.liuwei.weathereffect.view.WindmillSurfaceView;
@@ -20,10 +23,6 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		//背景容器
 		linearWeatherBg = (FrameLayout)findViewById(R.id.linearWeatherBg);
-		
-		
-		
-		
 		
 	}
 
@@ -43,6 +42,11 @@ public class MainActivity extends Activity {
 		linearWeatherBg.addView(rainView);
 		// 更新当前雪花
 		rainView.update();
+		
+		
+		LightningView lightningView = new LightningView(this, 80, 0, 80);
+		linearWeatherBg.addView(lightningView);
+		lightningView.move();
 		
 	}
 	public void doSnow(View v){
