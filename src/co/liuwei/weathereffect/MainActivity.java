@@ -11,6 +11,7 @@ import co.liuwei.weathereffect.view.CloudyView;
 import co.liuwei.weathereffect.view.LightningView;
 import co.liuwei.weathereffect.view.RainView;
 import co.liuwei.weathereffect.view.SnowSurfaceView;
+import co.liuwei.weathereffect.view.SunSurfaceView;
 import co.liuwei.weathereffect.view.WindmillSurfaceView;
 
 public class MainActivity extends Activity {
@@ -77,7 +78,9 @@ public class MainActivity extends Activity {
 				 view4.move();
 	}
 	public void doSunny(View v){
-		
+		linearWeatherBg.removeAllViews();
+		SunSurfaceView loadWeatherView = new SunSurfaceView(this);
+		linearWeatherBg.addView(loadWeatherView);
 	}
 	public void doFog(View v){
 		
