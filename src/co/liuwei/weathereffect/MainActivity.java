@@ -1,12 +1,11 @@
 package co.liuwei.weathereffect;
 
 import android.app.Activity;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
+import co.liuwei.weathereffect.particle.ParticleView;
 import co.liuwei.weathereffect.view.CloudyView;
 import co.liuwei.weathereffect.view.LightningView;
 import co.liuwei.weathereffect.view.RainView;
@@ -21,10 +20,11 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		//±³¾°ÈÝÆ÷
-		linearWeatherBg = (FrameLayout)findViewById(R.id.linearWeatherBg);
+//		setContentView(R.layout.activity_main);
+//		//±³¾°ÈÝÆ÷
+//		linearWeatherBg = (FrameLayout)findViewById(R.id.linearWeatherBg);
 		
+		setContentView(new ParticleView(this));  
 	}
 
 	public void doRain(View v){
